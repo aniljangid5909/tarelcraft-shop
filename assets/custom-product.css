@@ -1,0 +1,500 @@
+.customise_data.wrapper, .images_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.has-icon-option {
+  padding: 0 !important;
+  display: inline-flex !important;
+}
+
+variant-selects input:checked + label {
+  border: 1px solid #000;
+}
+
+variant-selects .form__label {
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+variant-selects input:checked + label svg path {
+  fill: #FF6B2C;
+}
+
+.product__sku {
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.product__info-container .price__container .price__regular {
+  display: none !important;
+}
+.product__info-container .price__container .price__sale {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+.product__info-container .price__container .price__sale .price-item {
+  color: #000 !important;
+  font-family: "BDO Grotesk" !important;
+  font-size: 22px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+.product__info-container .price__container .price__sale .price-item.price-item--regular {
+  color: #B0B0B0 !important;
+  text-align: center !important;
+  font-family: "BDO Grotesk" !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: normal !important;
+}
+.product__info-container .price-item--save {
+  color: #1F4E5F !important;
+  font-family: "BDO Grotesk" !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: normal !important;
+}
+
+.main-swiper .swiper-slide {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.main-swiper .swiper-slide .product-media-container {
+  width: 100% !important;
+}
+.main-swiper .swiper-slide img {
+  aspect-ratio: 655.818/771.18;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.thumb-swiper {
+  margin-top: 10px;
+}
+.thumb-swiper .swiper-slide img {
+  aspect-ratio: 156.417/233.586;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: auto;
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  height: -moz-max-content;
+  height: max-content;
+}
+.swiper-slide img {
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.shipping-country-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shipping-country-selector label {
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.shipping-country-selector .element-selector {
+  position: relative;
+}
+.shipping-country-selector .element-selector select {
+  width: 100%;
+  padding: 0 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 32px;
+  border: 1px solid #222;
+  height: 42px;
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.shipping-country-selector .element-selector svg {
+  position: absolute;
+  inset: 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  margin-right: 25px;
+}
+
+#shipping-availability {
+  margin: 0 !important;
+}
+
+.description-wrapper {
+  display: flow-root;
+  border-radius: 12px;
+  border: 1px solid #FF6B2C;
+  background: #FFF;
+}
+.description-wrapper .plus-area {
+  display: flex;
+}
+.description-wrapper .title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.description-wrapper .title-area > * {
+  pointer-events: none;
+}
+.description-wrapper .content-area {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.description-wrapper[open] .title-area svg .up_down {
+  display: none;
+}
+
+.upload-area {
+  position: fixed;
+  width: 720px;
+  max-width: 100%;
+  height: 100%;
+  inset: 0;
+  margin: auto;
+  z-index: 999;
+  background-color: #fff;
+  margin-right: 0;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+  overflow: auto;
+  padding-bottom: 50px;
+}
+.upload-area .close-btn {
+  background: transparent;
+  border: none;
+  position: sticky;
+  margin-left: auto;
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 999;
+  margin-bottom: -35px;
+  cursor: pointer;
+  top: 0;
+}
+.upload-area .upload-title {
+  margin: 0;
+  color: #222;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 35px 0;
+}
+.upload-area .photo-one-area label {
+  border-radius: 15px;
+  border: 2px dashed #9A9A9A;
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 12px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.upload-area .photo-one-area label::after {
+  content: url("./b-plus-icon.svg");
+  position: absolute;
+  inset: 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  margin-bottom: -28px;
+}
+.upload-area .photo-one-area img {
+  aspect-ratio: 193.637/220.136;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 36%;
+     object-position: 0% 36%;
+  border-radius: 15px;
+  border: 1px solid #CECECE;
+  width: 193px;
+  height: auto;
+}
+.upload-area .photo-one-area .details {
+  margin: 25px 0;
+}
+.upload-area .photo-one-area .details h4 {
+  color: #222;
+  text-align: center;
+  font-family: "BDO Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.upload-area .photo-one-area .details p {
+  color: #222;
+  text-align: center;
+  font-family: "BDO Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+.upload-area .photo-two-area label, .upload-area .photo-three-area label {
+  border-radius: 15px;
+  border: 2px dashed #9A9A9A;
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 12px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.upload-area .photo-two-area label::after, .upload-area .photo-three-area label::after {
+  content: url("./b-plus-icon.svg");
+  position: absolute;
+  inset: 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  margin-bottom: -28px;
+}
+.upload-area .photo-two-area img, .upload-area .photo-three-area img {
+  aspect-ratio: 193.637/220.136;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 15px;
+  border: 1px solid #CECECE;
+  width: 193px;
+  height: auto;
+}
+.upload-area .photo-two-area .details, .upload-area .photo-three-area .details {
+  margin: 25px 0;
+}
+.upload-area .photo-two-area .details h4, .upload-area .photo-three-area .details h4 {
+  color: #222;
+  text-align: center;
+  font-family: "BDO Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.upload-area .photo-two-area .details p, .upload-area .photo-three-area .details p {
+  color: #222;
+  text-align: center;
+  font-family: "BDO Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+}
+
+.upload-area .button-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.upload-area .button-wrapper button {
+  width: 312px;
+  max-width: 100%;
+}
+.upload-area[open] {
+  transform: translateX(0);
+}
+.upload-area[open] + .upload-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.upload-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: rgba(2, 2, 2, 0.76);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.uploaded-area {
+  display: block;
+  margin-bottom: 20px;
+}
+.uploaded-area img {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 100%;
+}/*# sourceMappingURL=custom-product.css.map */
+.otherimages{
+  margin: 10px;
+  padding: 20px;
+  border: 3px solid #eee;
+}
+.other_image label {
+  position: relative;
+  display: block;
+  width: 100px;
+  border: 10px solid #0c6f96;
+  height: 100px;
+
+}
+.other_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icon_others {
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.custom_options_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.custom_options .single_item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    margin-right: 4px;
+    margin-bottom: 5px;
+}
+.custom_options label span {
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0067/6934/4548/files/custom-E01-Gray.png?v=1612756630);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 42px;
+}
+.custom_options label {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    display: block;
+}
+.custom_options .single_item input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+.custom_options .single_item:has(input:checked) {
+  border: 3px solid #5600e3;
+}
+.wrapper_cprice {
+    display: flex;
+    gap: 6.4%;
+    margin-left: 1rem;
+}
+.option_with_price.option-head  {
+    position: absolute;
+    bottom: -24px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.option_with_price span{
+  color: red; 
+  font-weight: 600;
+}
+
+.option_with_price.option-head span {
+  color: rgb(var(--color-foreground));
+  font-weight: 400;
+}
+
+.option_with_price.option-size {
+    position: absolute;
+    bottom: 0;
+    top: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.wrapper_cprice.cstom_size {
+  padding-top: 24px;
+}
+@media(max-width: 767px){
+
+  .upload-area{width: 100%;}
+  .upload-area .photo-one-area img, .upload-area .photo-two-area img, .upload-area .photo-three-area img{
+    width: 100px;
+  }
+  .upload-area .photo-one-area label, .upload-area .photo-two-area label, .upload-area .photo-three-area label{
+    padding: 10px;
+  }
+  .customise_data.wrapper, .images_wrapper{
+    gap: 5px;
+  }
+  .images_wrapper{flex-wrap: wrap;}
+  .customise_data  .details h4{font-size: 16px !important;}
+}
+@media (max-width: 380px){
+  .customise_data.wrapper{flex-wrap: wrap;}
+}

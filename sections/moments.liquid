@@ -1,0 +1,180 @@
+<div class="page-width">
+    <div class="moments_wrapper">
+        {% for block in section.blocks %}
+        <div class="moment moment_{{ forloop.index }}">
+            <div class="moment_img">
+              <img src="{{ block.settings.img | img_url:'master' }}" height="100%" width="100%" alt="{{ block.settings.title }}" title="{{ block.settings.title }}">
+              <div class="badge_title">
+                <span class="badge_label">{{ block.settings.label }}</span>
+                <h4 class="m-0 moment_title">{{ block.settings.title }}</h4>
+            </div>
+            <a class="shop_now_btn" href="{{ block.settings.url }}">{{ block.settings.btn }}</a>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.moments_wrapper {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.column_in_row }}, 1fr);
+  gap: 30px;
+}
+{% comment %} .moment_img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+} {% endcomment %}
+
+
+..moment_img {
+  position: relative;
+
+}
+
+.moment_img::before,
+.moment_img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Top shadow */
+.moment_img::before {
+    top: 0;
+     background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+/* Bottom shadow */
+.moment_img::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.moment_img {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.moment_img img {display: block; border-radius: 10px; object-fit: cover;}
+.badge_title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+span.badge_label {
+    background: #ff6b2d;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 17px;
+}
+.moment_title{font-size: 1.6rem; color: #fff; margin-top: 5px; }
+.shop_now_btn{
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    text-decoration: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0px 10px !important;
+    border-radius: 22px;
+     z-index: 3;
+}
+
+@media(max-width: 767px){
+.shop_now_btn{padding: 0px 10px !important ; width: max-content;}    
+.moments_wrapper {
+  grid-template-columns: repeat({{ section.settings.column_in_row_m }}, 1fr);
+  gap: 10px;
+}
+.moment_img{height: 100%}
+.moment_1 {
+  grid-row: span 2;
+}
+
+.moment_2,
+.moment_3,
+.moment_4,
+.moment_5 {
+  grid-row: span 1;
+}
+}
+</style>
+{% schema %}
+{
+    "name": "Moments",
+    "settings": [
+        {
+            "type": "range",
+            "id": "column_in_row",
+            "label":"To Show in Row Desktop",
+            "min": 2,
+            "max": 6,
+            "default":4
+        },
+        {
+            "type": "range",
+            "id": "column_in_row_m",
+            "label":"To Show in Row Mobile",
+            "min": 1,
+            "max": 3,
+            "default":2
+        }
+    ],
+    "blocks": [
+        {
+          "name":"moment",
+          "type": "column",
+          "settings": [
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "Select image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "title"
+            },
+            {
+                "type": "text",
+                "id": "label",
+                "label": "Badge"
+            },
+            {
+                "type": "text",
+                "id": "btn",
+                "label": "Button"
+            },
+            {
+                "type": "url",
+                "id": "url",
+                "label": "Button url"
+            }
+          ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"moments"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,174 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_QGN7Xq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LAqwXF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Everything You Need to Know</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Caf4PC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Answers to the most common questions before you order your custom figurine</p>"
+          }
+        },
+        "button_6DfBwg": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LAqwXF",
+        "text_Caf4PC",
+        "button_6DfBwg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 24
+      }
+    },
+    "collapsible_content_7YyUtE": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_LxXTdA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to receive my figurine?",
+            "icon": "none",
+            "row_content": "<p>Each figurine is handmade from start to finish, so production typically takes 2–3 weeks depending on complexity. We’ll send you progress photos before shipping to ensure everything looks perfect.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xJfpaT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I customize the pose, clothing, or accessories?",
+            "icon": "none",
+            "row_content": "<p>Yes! At Tarelcraft, we specialize in custom and personalized creations. You can share your ideas, text, or photos, and we’ll craft something unique just for you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cwejLy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What materials are used to make the figurines?",
+            "icon": "none",
+            "row_content": "<p>We use high-quality, durable materials such as wood, resin, clay, and eco-friendly paints—depending on the product type.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pgfgNy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I see a preview before my figurine ships?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! We share a digital preview/mockup before production. You can approve it or request small changes if needed.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xbNHFF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship internationally?",
+            "icon": "none",
+            "row_content": "<p>Yes, international orders may take 7–14 days.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qc3GTC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my figurine arrives damaged?",
+            "icon": "none",
+            "row_content": "<p>We're really sorry if that happens! Please contact us within 48 hours of delivery with photos of the issue, and we’ll arrange a replacement or refund as per our policy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WY4ydy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I order multiple figurines for a group or event?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_kk6DT3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer gift cards?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! We offer gift cards that make the perfect gift. You can choose the amount, and the recipient can use it anytime on any of our offerings.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_LxXTdA",
+        "collapsible_row_xJfpaT",
+        "collapsible_row_cwejLy",
+        "collapsible_row_pgfgNy",
+        "collapsible_row_xbNHFF",
+        "collapsible_row_qc3GTC",
+        "collapsible_row_WY4ydy",
+        "collapsible_row_kk6DT3"
+      ],
+      "custom_css": [
+        ".collapsible-row-layout .accordion details {border-radius: var(--border-radius); border: 1px solid #878787;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-666a462c-9b66-4f47-a607-0aaaaf868f2a",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 24,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_QGN7Xq",
+    "collapsible_content_7YyUtE"
+  ]
+}

@@ -1,0 +1,396 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "banner_with_text_j8kk6H": {
+      "type": "banner-with-text",
+      "blocks": {
+        "heading_XdPrcM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Black Friday</strong>\\n Up to 50% Off",
+            "heading_size": "hxxl"
+          }
+        },
+        "button_FEbdPP": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "View Collections",
+            "button_link_1": "#shopify-section-template--27544766415178__rich_text_rgBPzP",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "#",
+            "button_style_secondary_2": false
+          }
+        },
+        "trust_icon_tpc3DT": {
+          "type": "trust-icon",
+          "settings": {
+            "trust_icon": "shopify://shop_images/6dbb2116237aefe453649af75f78a852f0e433aa.png",
+            "trust_review_description": "<p>Absolutely amazing detail — my husband couldn’t stop laughing!</p>",
+            "avatar": "shopify://shop_images/Image-18.png",
+            "name": "Emily R"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XdPrcM",
+        "button_FEbdPP",
+        "trust_icon_tpc3DT"
+      ],
+      "custom_css": [
+        ".media img {object-fit: contain;}",
+        ".image-with-text__heading strong {color: #d4a34b;}",
+        ".button {color: #222;}",
+        ".button.button--secondary {color: #fff; border-color: rgb(var(--color-button-text));}",
+        "@media (min-width: 750px) {.image-with-text__content {padding-left: 0; }}",
+        "@media (min-width: 750px) and (max-width: 1280px) {.media image {object-fit: contain; }}"
+      ],
+      "name": "banner-with-text",
+      "settings": {
+        "image": "shopify://shop_images/ironmen.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_BM96iJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zwfJqD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Confidently with Tarelcraft",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zwfJqD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 8
+      }
+    },
+    "multicolumn_Ngixe6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mYjPc9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GlobeHemisphereWest.svg",
+            "title": "Worldwide Shipping",
+            "text": "<p>Fast, tracked delivery across the U.S., Canada, and 50+ countries.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kKkgFn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Vector_22b026db-a7cf-4ff6-8001-9c3666911826.svg",
+            "title": "Handcrafted Quality",
+            "text": "<p>Each figurine is sculpted and painted by skilled artists — no two alike.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_etaA8M": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Star.svg",
+            "title": "Trusted Reviews",
+            "text": "<p>Thousands of verified 5-star reviews from real customers on Trustpilot.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qtxTcX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ShieldCheck.svg",
+            "title": "Money-Back Guarantee",
+            "text": "<p>If you’re not thrilled with your order, we’ll remake or refund it.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mYjPc9",
+        "column_kKkgFn",
+        "column_etaA8M",
+        "column_qtxTcX"
+      ],
+      "name": "Shop Confidently",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-4",
+        "color_scheme_card": "scheme-4",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 4
+      }
+    },
+    "rich_text_rgBPzP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A9L8PG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop by Collection",
+            "heading_size": "h1"
+          }
+        },
+        "text_dHr3xC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our most popular figurine styles — crafted for every story and personality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A9L8PG",
+        "text_dHr3xC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_qWCxDz": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {font-family: var(--BDO-font-regular); text-transform: none;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-sellers",
+        "products_to_show": 3,
+        "title": "Best Seller",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_dCzMQn": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {font-family: var(--BDO-font-regular); text-transform: none;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "keinemusik",
+        "products_to_show": 3,
+        "title": "Keine Musik",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_F4Grwd": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {font-family: var(--BDO-font-regular); text-transform: none;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "famous-person",
+        "products_to_show": 3,
+        "title": "Famous Person",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 48
+      }
+    },
+    "featured_collection_dfw9tj": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "athlets",
+        "products_to_show": 3,
+        "title": "Athlets",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "banner_with_text_ihTL9e": {
+      "type": "banner-with-text",
+      "blocks": {
+        "heading_wfKPnN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not Sure Which Photo \\nto Use?",
+            "heading_size": "h1"
+          }
+        },
+        "text_zfnXix": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give them the joy of creating their own custom figurine — our digital gift card is the perfect solution for any occasion.</p>",
+            "text_style": "body",
+            "custom_bullets": ""
+          }
+        },
+        "button_enGURK": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Send a Gift Card",
+            "button_link_1": "#viewsections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "#",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wfKPnN",
+        "text_zfnXix",
+        "button_enGURK"
+      ],
+      "custom_css": [],
+      "name": "banner-with-text",
+      "settings": {
+        "image": "shopify://shop_images/muche_wala_bnda_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-b7f32ab1-735c-4ea0-a769-39165a643594",
+        "color_scheme": "scheme-b7f32ab1-735c-4ea0-a769-39165a643594",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "banner_with_text_j8kk6H",
+    "rich_text_BM96iJ",
+    "multicolumn_Ngixe6",
+    "rich_text_rgBPzP",
+    "featured_collection_qWCxDz",
+    "featured_collection_dCzMQn",
+    "featured_collection_F4Grwd",
+    "featured_collection_dfw9tj",
+    "banner_with_text_ihTL9e"
+  ]
+}

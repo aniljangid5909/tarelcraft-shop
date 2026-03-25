@@ -1,0 +1,1301 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner_with_text_jFRc8k": {
+      "type": "banner-with-text",
+      "blocks": {
+        "heading_dtXd7E": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Bobbleheads — Up to 50% Off",
+            "heading_size": "h1"
+          }
+        },
+        "text_wei9GW": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Biggest Personalized, Laugh-Out-Loud Deal of 2025</strong><br/>Turn your photo into a lifelike mini version — handcrafted by real artists and now available with exclusive Black Friday savings</p>",
+            "text_style": "body",
+            "custom_bullets": ""
+          }
+        },
+        "trust_icon_G4NM6B": {
+          "type": "trust-icon",
+          "settings": {
+            "trust_icon": "shopify://shop_images/6dbb2116237aefe453649af75f78a852f0e433aa.png",
+            "trust_review_description": "<p>Absolutely amazing detail — my husband couldn’t stop laughing!</p>",
+            "avatar": "shopify://shop_images/Image-18.png",
+            "name": "Emily R"
+          }
+        },
+        "button_bWF6HV": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Get Started",
+            "button_link_1": "shopify://pages/shop-by-collection",
+            "button_style_secondary_1": false,
+            "button_label_2": "View Examples",
+            "button_link_2": "shopify://pages/view-examples",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_dtXd7E",
+        "text_wei9GW",
+        "trust_icon_G4NM6B",
+        "button_bWF6HV"
+      ],
+      "custom_css": [
+        ".button.button--secondary {color: #fff; border-color: rgb(var(--color-button-text));}",
+        "@media (min-width: 750px) {.image-with-text__content {padding-left: 0; }}",
+        "@media (min-width: 750px) and (max-width: 1280px) {.media image {object-fit: contain; }}"
+      ],
+      "name": "banner-with-text",
+      "settings": {
+        "image": "shopify://shop_images/custom_bobblheads.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_maquee_slider_WMpaMH": {
+      "type": "marquee-instafeed",
+      "name": "Image marquee slider",
+      "settings": {
+        "image_height": 60,
+        "image_height_mobile": 80,
+        "image_gap": 20,
+        "padding": 0,
+        "animation_duration": 22,
+        "direction": "left",
+        "pause_on_hover": true,
+        "background_color": "#000000",
+        "border_radius": 8,
+        "image_1": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_5.jpg",
+        "image_2": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM.jpg",
+        "image_3": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.45_PM_1.jpg",
+        "image_4": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_6.jpg",
+        "image_5": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_1.jpg",
+        "image_6": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_4.jpg",
+        "image_7": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_2.jpg",
+        "image_8": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.44_PM_3.jpg",
+        "image_9": "shopify://shop_images/WhatsApp_Image_2025-08-11_at_1.17.45_PM.jpg"
+      }
+    },
+    "video_n9aarQ": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/copy_480E0E49-134E-41BA-98FE-B80173C1F46F (1).mov",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "rich_text_dLqgnJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RRUyd7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Shop Confidently with Tarelcraft</strong>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RRUyd7"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_AANFRE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FNe9ff": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/GlobeHemisphereWest.svg",
+            "title": "Worldwide Shipping",
+            "text": "<p>Fast, tracked delivery across the U.S., Canada, and 50+ countries.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NTf4Ez": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Vector_22b026db-a7cf-4ff6-8001-9c3666911826.svg",
+            "title": "Handcrafted Quality",
+            "text": "<p>Each figurine is sculpted and painted by skilled artists — no two alike.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nj44dP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Star.svg",
+            "title": "Trusted Reviews",
+            "text": "<p>Thousands of verified 5-star reviews from real customers on Trustpilot.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HhdUy7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ShieldCheck.svg",
+            "title": "Money-Back Guarantee",
+            "text": "<p>If you’re not thrilled with your order, we’ll remake or refund it.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FNe9ff",
+        "column_NTf4Ez",
+        "column_nj44dP",
+        "column_HhdUy7"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Shop Confidently",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "color_scheme_card": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_Nti6tL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_L7hKAd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Made for Every Moment</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_7XNjyi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No matter the person or occasion, there’s a Tarelcraft figurine for it<br/><br/></p>"
+          }
+        },
+        "button_AykfcH": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_L7hKAd",
+        "text_7XNjyi",
+        "button_AykfcH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "moments_8TiXN8": {
+      "type": "moments",
+      "blocks": {
+        "column_GxarbF": {
+          "type": "column",
+          "settings": {
+            "img": "shopify://shop_images/PAGE-sm-banner-14.webp",
+            "title": "Corporate gift",
+            "label": "New",
+            "btn": "Shop Now",
+            "url": "/"
+          }
+        },
+        "column_fQURnx": {
+          "type": "column",
+          "settings": {
+            "img": "shopify://shop_images/PAGE-sm-banner-2-1.webp",
+            "title": "Gift for doctor",
+            "label": "50%",
+            "btn": "Shop Now",
+            "url": "/"
+          }
+        },
+        "column_FT9fbc": {
+          "type": "column",
+          "settings": {
+            "img": "shopify://shop_images/PAGE-sm-banner-1.webp",
+            "title": "Wedding",
+            "label": "Hot",
+            "btn": "Shop Now",
+            "url": "/"
+          }
+        },
+        "column_H7ymkM": {
+          "type": "column",
+          "settings": {
+            "img": "shopify://shop_images/PAGE-sm-banner-3-1.webp",
+            "title": "Birthday Gifts",
+            "label": "New",
+            "btn": "Shop Now",
+            "url": ""
+          }
+        },
+        "column_VhaTzm": {
+          "type": "column",
+          "settings": {
+            "img": "shopify://shop_images/PAGE-sm-banner-8.webp",
+            "title": "Funny gifts",
+            "label": "70%",
+            "btn": "Shop Now",
+            "url": "/"
+          }
+        }
+      },
+      "block_order": [
+        "column_GxarbF",
+        "column_fQURnx",
+        "column_FT9fbc",
+        "column_H7ymkM",
+        "column_VhaTzm"
+      ],
+      "name": "moments",
+      "settings": {
+        "column_in_row": 4,
+        "column_in_row_m": 2
+      }
+    },
+    "multicolumn_PbThPL": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FzAriR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Vector_2_95d44cec-2c7a-4991-906d-c379f2f1751b.svg",
+            "title": "Weddings & Anniversaries",
+            "text": "<p>Capture love in handcrafted detail that lasts forever.<br/><br/> </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4EzE9D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Group.svg",
+            "title": "Birthdays & Holidays",
+            "text": "<p>The perfect personalized gift they’ll never forget.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Htg9a3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ri_team-fill.svg",
+            "title": "Graduations & Milestones",
+            "text": "<p>Honor big moments with a keepsake that inspires pride.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6CD6hB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/vaadin_academy-cap.svg",
+            "title": "Graduations & Milestones",
+            "text": "<p>Honor big moments with a keepsake that inspires pride.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gYykLy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ion_paw.svg",
+            "title": "Pets & Family",
+            "text": "<p>Immortalize the ones who bring you joy every day</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_t9HfjL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fluent_sport-soccer-20-filled.svg",
+            "title": "Sports & Hobbies",
+            "text": "<p>Bring your passion or hobby to life in miniature.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HJrEhP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/emojione-monotone_couple-with-heart.svg",
+            "title": "Couples & Friend",
+            "text": "<p>A fun, thoughtful way to celebrate your connection.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hwkM8D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/solar_user-bold.svg",
+            "title": "Collectors & Fans",
+            "text": "<p>Build your personal collection of handcrafted art pieces.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FzAriR",
+        "column_4EzE9D",
+        "column_Htg9a3",
+        "column_6CD6hB",
+        "column_gYykLy",
+        "column_t9HfjL",
+        "column_HJrEhP",
+        "column_hwkM8D"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn-card {box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;}"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "color_scheme_card": "scheme-256da890-db1c-4cf3-b468-21ee9eb4b472",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_Uf4jqk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_z7NQEA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stop Searching for the Perfect Gift — You Just Found It",
+            "heading_size": "h1"
+          }
+        },
+        "text_qYYxWU": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body",
+            "custom_bullets": "<ul><li><strong>Hard to find unique gifts:</strong> Every store sells the same things — nothing feels personal.</li><li><strong>Takes too much time:</strong> Endless scrolling and guessing what they’ll like.</li><li><strong>Never gets the reaction you want:</strong> Most gifts get a polite thank you and that’s it</li><li><strong>Feels too impersonal:</strong> You want something that actually means something.</li></ul>"
+          }
+        },
+        "button_bVX4Ag": {
+          "type": "button",
+          "settings": {
+            "button_label": "Create My Figurine",
+            "button_link": "shopify://products/1x-custom",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_z7NQEA",
+        "text_qYYxWU",
+        "button_bVX4Ag"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_51.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 44,
+        "padding_bottom": 24
+      }
+    },
+    "after_before_image_MQ8BQk": {
+      "type": "after-before-image",
+      "name": "Before after slider",
+      "settings": {
+        "title": "See the Art of Transformation",
+        "description": "<p>From photos to personality — every Tarelcraft figurine is sculpted by hand to capture the details that make you, you.</p>",
+        "title_size": 34,
+        "description_size": 13,
+        "text_alignment": "center",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "gap": 30,
+        "autoplay": true,
+        "autoplay_speed": 3000,
+        "transition_speed": 500,
+        "loop": true,
+        "show_arrows": true,
+        "show_dots": false,
+        "contamoniner_width": 1400,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "image_aspect_ratio": 145,
+        "show_labels": false,
+        "before_label": "Before",
+        "after_label": "After",
+        "background_color": "#f4f4f4",
+        "title_color": "#222222",
+        "description_color": "#666666",
+        "card_background": "#ffffff",
+        "card_title_color": "#222222",
+        "card_text_color": "#666666",
+        "slider_color": "#ffffff",
+        "slider_icon_color": "#222222",
+        "control_button_bg": "#ffffff",
+        "control_button_icon": "#222222",
+        "nav_button_bg": "#ffffff",
+        "nav_button_icon": "#222222",
+        "dot_color": "#222222",
+        "label_background": "#222222",
+        "label_text_color": "#ffffff",
+        "card_border_radius": 10,
+        "card_shadow_vertical": 4,
+        "card_shadow_blur": 15,
+        "card_shadow_opacity": 10,
+        "card_1_enabled": true,
+        "card_1_before_image": "shopify://shop_images/06789d2a240125734912b99923fce3b132b10f00.jpg",
+        "card_1_after_image": "shopify://shop_images/Rectangle_54.png",
+        "card_1_title": "",
+        "card_1_text": "",
+        "card_2_enabled": true,
+        "card_2_before_image": "shopify://shop_images/Rectangle_55_1.png",
+        "card_2_after_image": "shopify://shop_images/Rectangle_53.png",
+        "card_2_title": "",
+        "card_2_text": "",
+        "card_3_enabled": true,
+        "card_3_before_image": "shopify://shop_images/Rectangle_54_1.png",
+        "card_3_after_image": "shopify://shop_images/Rectangle_52_1.png",
+        "card_3_title": "",
+        "card_3_text": "",
+        "card_4_enabled": false,
+        "card_4_before_image": "shopify://shop_images/Rectangle_55_2.png",
+        "card_4_after_image": "shopify://shop_images/Rectangle_53_1.png",
+        "card_4_title": "",
+        "card_4_text": "",
+        "card_5_enabled": true,
+        "card_5_before_image": "shopify://shop_images/Rectangle_52_2.png",
+        "card_5_after_image": "shopify://shop_images/Rectangle_161124990.png",
+        "card_5_title": "",
+        "card_5_text": "",
+        "card_6_enabled": true,
+        "card_6_before_image": "shopify://shop_images/06789d2a240125734912b99923fce3b132b10f00.jpg",
+        "card_6_after_image": "shopify://shop_images/Rectangle_54.png",
+        "card_6_title": "",
+        "card_6_text": "",
+        "card_7_enabled": false,
+        "card_7_title": "Transformation 7",
+        "card_7_text": "Impressive results",
+        "card_8_enabled": false,
+        "card_8_title": "Transformation 8",
+        "card_8_text": "Fantastic change",
+        "card_9_enabled": false,
+        "card_9_title": "Transformation 9",
+        "card_9_text": "Wonderful results",
+        "card_10_enabled": false,
+        "card_10_title": "Transformation 10",
+        "card_10_text": "Spectacular transformation"
+      }
+    },
+    "rich_text_tWT6Fx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jEBKtJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Shop by Collection</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dJ69M7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our most popular figurine styles — crafted for every story and personality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jEBKtJ",
+        "text_dJ69M7"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "featured_collection_3FdQXp": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "title": "Customer Favorites",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_slider_LdQXYn": {
+      "type": "image-slider",
+      "blocks": {
+        "slide_qrdPiT": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/05DE00B6-84FC-4E3D-A838-1A2BA8498B62_34066951-9012-4f10-929f-58811963075d.jpg",
+            "url": ""
+          }
+        },
+        "slide_99khBt": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/1EC759A0-4F2E-45A7-A45D-FDC41FBE2C57_5e9bbe32-0409-4ffa-8cb9-5731212ddccf.jpg",
+            "url": ""
+          }
+        },
+        "slide_hUmixt": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/68F86486-F7E2-47A7-9142-65F5BE5632F9_deab4ef8-4eac-4ddd-9f12-c117c91151d0.jpg",
+            "url": ""
+          }
+        },
+        "slide_qMNRHq": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/41FD2145-26D6-41B2-853B-3FFB300744D1_64b136db-fb11-4483-8786-7079bdd6714a.jpg",
+            "url": ""
+          }
+        },
+        "slide_f78EhB": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/7F1804BA-4F1B-421A-A930-C31A4C77EBCF_fdb5fdc4-65ca-4ceb-a0c4-cdd92c455c70.jpg",
+            "url": ""
+          }
+        },
+        "slide_7AN4qd": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/883CB33A-B299-4EF6-A18C-45006054E763_2903f42b-2220-40db-b735-ced023021b46.jpg",
+            "url": ""
+          }
+        },
+        "slide_peJERb": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/74DF525F-D754-40AC-AC14-1F9ABF136E9B_3bb30245-3e25-4793-8ef2-a5c1e4b07efb.jpg",
+            "url": ""
+          }
+        },
+        "slide_cPrfnJ": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/997ECC84-FE16-498D-933F-24DBE2B39870_b3ae035e-c204-40e7-b097-f023eaa12877.jpg",
+            "url": ""
+          }
+        },
+        "slide_RR9fq4": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/0A28A07B-74EE-4A69-933E-96B9E37B6362_b6988f2f-1de2-46a0-8f1a-d7a95f701b3e.jpg",
+            "url": ""
+          }
+        },
+        "slide_TAM3HQ": {
+          "type": "slide",
+          "settings": {
+            "combined_image": "shopify://shop_images/8E3F852C-596C-49B4-8C75-5B5B29E0AA56_77dee74e-3c22-4553-8a73-e3e2567641d5.jpg",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_qrdPiT",
+        "slide_99khBt",
+        "slide_hUmixt",
+        "slide_qMNRHq",
+        "slide_f78EhB",
+        "slide_7AN4qd",
+        "slide_peJERb",
+        "slide_cPrfnJ",
+        "slide_RR9fq4",
+        "slide_TAM3HQ"
+      ],
+      "name": "Image Slider",
+      "settings": {}
+    },
+    "featured_collection_iEhbkW": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "famous-person",
+        "products_to_show": 4,
+        "title": "Famous Icons",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "video_slider_eh7RDY": {
+      "type": "video-slider",
+      "name": "Video slider",
+      "settings": {
+        "heading": "<p>See Why Thousands Are Smiling With TARELCRAFT<br/></p>",
+        "subheading": "<p>Real reactions from real customers — every figurine tells its own story</p>",
+        "text_alignment": "center",
+        "video_1": "https://cdn.shopify.com/videos/c/o/v/2a817fdbc28642b5ac1bb1c97da32d32.mp4",
+        "caption_1": "",
+        "video_2": "https://cdn.shopify.com/videos/c/o/v/78801d544fd940b9ac4a811b9eb1ece1.mp4",
+        "caption_2": "",
+        "video_3": "https://cdn.shopify.com/videos/c/o/v/2c1c95ab674a4e4ea14f34cf5f0adc66.mp4",
+        "caption_3": "",
+        "video_4": "https://cdn.shopify.com/videos/c/o/v/f7d2a1bc3f004fcda7dc39555a59a86e.mp4",
+        "caption_4": "",
+        "video_5": "",
+        "caption_5": "",
+        "video_6": "",
+        "caption_6": "",
+        "loop": false,
+        "muted": false,
+        "controls": false,
+        "video_aspect_ratio": 130,
+        "video_border_radius": 16,
+        "play_button_size": 50,
+        "play_button_bg_color": "#d4a34b",
+        "play_button_hover_bg_color": "#d4a34b",
+        "play_button_icon_color": "#ffffff",
+        "slides_per_view": 4,
+        "slides_per_view_tablet": 1,
+        "slide_gap": 15,
+        "show_controls": false,
+        "show_dots": false,
+        "enable_autoplay": false,
+        "autoplay_delay": 3,
+        "contsectionner_width": 1500,
+        "section_padding_top": 55,
+        "section_padding_bottom": 55,
+        "color_scheme": "scheme-2",
+        "background_color": "#1a1a1a",
+        "heading_color": "#ffffff",
+        "heading_size": 36,
+        "subheading_color": "#f7f9fa",
+        "subheading_size": 16,
+        "caption_color": "#121212",
+        "caption_size": 14,
+        "nav_button_color": "#121212",
+        "nav_button_hover_color": "#ff6b2c",
+        "nav_button_icon_color": "#ffffff",
+        "dot_color": "#cccccc",
+        "dot_active_color": "#ff6b2c"
+      }
+    },
+    "rich_text_6ccwn9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_46U3Ag": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the Tarelcraft Community",
+            "heading_size": "h1"
+          }
+        },
+        "text_cPLYLd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Show off your custom figurine and win a $100 Gift Card every month. Post, tag, and get featured on our homepage!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_46U3Ag",
+        "text_cPLYLd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multimedia_with_text_PC9eid": {
+      "type": "multimedia-with-text",
+      "blocks": {
+        "heading_tULdQK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Monthly Giveaway Contest",
+            "heading_size": "h2"
+          }
+        },
+        "text_q6twr6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share your Tarelcraft figurine and get a chance to win a $100 Gift Card every month. Every post counts as an entry — the more you share, the higher your chances!</p>",
+            "text_style": "body",
+            "custom_bullets": "<p><strong>How to Participate</strong></p><ul><li>Take a photo with your custom Tarelcraft figurine</li><li>Post it on Instagram, TikTok, or Facebook</li><li>Tag @Tarelcraft and use #MyTarelcraftFigurine</li><li>Get featured on our homepage + enter the giveaway</li></ul>"
+          }
+        },
+        "social_e6xkQa": {
+          "type": "social",
+          "settings": {}
+        },
+        "button_8nWhUx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Share Your Figurine",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tULdQK",
+        "text_q6twr6",
+        "social_e6xkQa",
+        "button_8nWhUx"
+      ],
+      "name": "Multimedia with text",
+      "settings": {
+        "image_1": "shopify://shop_images/2f1cda0b39fa89b1a1777d24983a638f67dd7bf4.png",
+        "image_2": "shopify://shop_images/3b8a5b5ef0b919ef6a67f579c68e4da73f464f8a.png",
+        "image_3": "shopify://shop_images/78f00f8f97e8e67ee10c38c991b023c42430cb3d.png",
+        "image_4": "shopify://shop_images/08145027c3b825df6bff3537de899c1e3eee09c0.png",
+        "image_5": "shopify://shop_images/496915cc67a0dfbc90957297c9920e943db904c8.png",
+        "image_6": "shopify://shop_images/45251ae3e0b569ccdcf1ee02ab0c8773ed0d3a3f_1.png",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_iw6N9H": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_NaTRMD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Your Mini-Me Could Go Viral</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_GtV7mK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every figurine tells a story — now it’s your turn. <strong>Post your custom Tarelcraft figurine on Instagram or TikTok, tag @tarelcraft,</strong> and use #MyTarelcraft and #MiniMeMoment. <br/><br/> Every post enters you to win a <strong>$100 Gift Card </strong>and a feature on our homepage! <br/><br/>When you post, you’re not just sharing your creation — you’re putting Tarelcraft in front of your entire friend network, their friends, and their friends’ friends. It’s authentic, viral marketing that grows naturally because people love showing off something personal and fun. <br/><br/>Your photo could reach<strong> thousands of new potential customers,</strong> all through genuine excitement — not ads.</p>",
+            "text_style": "body",
+            "custom_bullets": ""
+          }
+        },
+        "button_Vrc87y": {
+          "type": "button",
+          "settings": {
+            "button_label": "Submit Your Story",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NaTRMD",
+        "text_GtV7mK",
+        "button_Vrc87y"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_52.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_Xqn8xj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xzAURt": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN THE CONTEST",
+            "heading_size": "h1"
+          }
+        },
+        "text_VgchLc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Show off your custom figurine and win a $100 Gift Card every month. Post, tag, and get featured on our homepage!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xzAURt",
+        "text_VgchLc"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multimedia_with_text_AUP4t9": {
+      "type": "multimedia-with-text",
+      "blocks": {
+        "heading_JxXngT": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHOW. SHARE. WIN.",
+            "heading_size": "h2"
+          }
+        },
+        "text_KqbmFd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your custom Tarelcraft figurine deserves the spotlight. Share your creation online and enter our monthly $100 Gift Card giveaway.</p>",
+            "text_style": "body",
+            "custom_bullets": "<p><strong>How It Works</strong></p><ul><li>Capture your figurine in a creative shot</li><li>Post on Instagram or TikTok</li><li>Tag @Tarelcraft + use #TarelcraftCommunity</li><li>Get approved → get featured → get a chance to win<br/></li></ul>"
+          }
+        },
+        "social_zYLNLx": {
+          "type": "social",
+          "settings": {}
+        },
+        "button_6z3bMc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Share Your Figurine",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JxXngT",
+        "text_KqbmFd",
+        "social_zYLNLx",
+        "button_6z3bMc"
+      ],
+      "name": "Multimedia with text",
+      "settings": {
+        "image_1": "shopify://shop_images/ae2ec42142901a7ca2fccea1159ecb4d5540f20b.png",
+        "image_2": "shopify://shop_images/cdc9bd504f24ff17b8e89e712b661333b727e3b1.png",
+        "image_3": "shopify://shop_images/a87ef59613a92ab136ced8c1115b29de4ada3146.png",
+        "image_4": "shopify://shop_images/372de8df643717de6e5f73e4232b68fb35915de5.jpg",
+        "image_5": "shopify://shop_images/08145027c3b825df6bff3537de899c1e3eee09c0.png",
+        "image_6": "shopify://shop_images/45251ae3e0b569ccdcf1ee02ab0c8773ed0d3a3f_1.png",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_y9iipr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LtEPU4": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>How It Works</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_qNNWtV": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body",
+            "custom_bullets": "<ul><li>Post your photo or video with your custom figurine</li><li>Tag @tarelcraft and includ #MyTarelcraft + #MiniMeMoment..</li><li>Each post = 1 entry for that month.</li><li>The most creative entry wins a $100 Gift Card and gets featured sitewide.</li><li>Winners announced monthly on Instagram and TikTok</li></ul>"
+          }
+        },
+        "button_4cFPVj": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LtEPU4",
+        "text_qNNWtV",
+        "button_4cFPVj"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/325a5852d21a7a87d593a08652cf498b64e4014d.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "rich_text_EbdheR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Lq3j7E": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Everything You Need to Know</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_7HDXfw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Answers to the most common questions before you order your custom figurine</p>"
+          }
+        },
+        "button_bHz9tN": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Lq3j7E",
+        "text_7HDXfw",
+        "button_bHz9tN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "collapsible_content_6jxHXe": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_aNCdVN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to receive my figurine?",
+            "icon": "none",
+            "row_content": "<p>Each figurine is handmade from start to finish, so production typically takes 2–3 weeks depending on complexity. We’ll send you progress photos before shipping to ensure everything looks perfect.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6Fy4LH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I customize the pose, clothing, or accessories?",
+            "icon": "none",
+            "row_content": "<p>Yes! At Tarelcraft, we specialize in custom and personalized creations. You can share your ideas, text, or photos, and we’ll craft something unique just for you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GxFFqm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What materials are used to make the figurines?",
+            "icon": "none",
+            "row_content": "<p>We use high-quality, durable materials such as wood, resin, clay, and eco-friendly paints—depending on the product type.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_TGfrT8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will I see a preview before my figurine ships?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! We share a digital preview/mockup before production. You can approve it or request small changes if needed.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NRgbDn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship internationally?",
+            "icon": "none",
+            "row_content": "<p>Yes, international orders may take 7–14 days.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YKr34C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my figurine arrives damaged?",
+            "icon": "none",
+            "row_content": "<p>We're really sorry if that happens! Please contact us within 48 hours of delivery with photos of the issue, and we’ll arrange a replacement or refund as per our policy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bfp4Uk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I order multiple figurines for a group or event?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_yH9ztc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer gift cards?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! We offer gift cards that make the perfect gift. You can choose the amount, and the recipient can use it anytime on any of our offerings.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_aNCdVN",
+        "collapsible_row_6Fy4LH",
+        "collapsible_row_GxFFqm",
+        "collapsible_row_TGfrT8",
+        "collapsible_row_NRgbDn",
+        "collapsible_row_YKr34C",
+        "collapsible_row_bfp4Uk",
+        "collapsible_row_yH9ztc"
+      ],
+      "custom_css": [
+        ".collapsible-row-layout .accordion details {border-radius: var(--border-radius); border: 1px solid #878787;}"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "scheme-666a462c-9b66-4f47-a607-0aaaaf868f2a",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "banner_with_text_jFRc8k",
+    "image_maquee_slider_WMpaMH",
+    "video_n9aarQ",
+    "image_banner",
+    "rich_text_dLqgnJ",
+    "multicolumn_AANFRE",
+    "rich_text_Nti6tL",
+    "moments_8TiXN8",
+    "multicolumn_PbThPL",
+    "image_with_text_Uf4jqk",
+    "after_before_image_MQ8BQk",
+    "rich_text_tWT6Fx",
+    "featured_collection_3FdQXp",
+    "image_slider_LdQXYn",
+    "featured_collection_iEhbkW",
+    "video_slider_eh7RDY",
+    "rich_text_6ccwn9",
+    "multimedia_with_text_PC9eid",
+    "image_with_text_iw6N9H",
+    "rich_text_Xqn8xj",
+    "multimedia_with_text_AUP4t9",
+    "image_with_text_y9iipr",
+    "rich_text_EbdheR",
+    "collapsible_content_6jxHXe"
+  ]
+}

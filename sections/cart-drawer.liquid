@@ -1,0 +1,58 @@
+{%- render 'cart-drawer' -%}
+
+{% schema %}
+{
+    "name": "Cart Drawer",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "enable_gift",
+            "label": "Enable Gift",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "free_shipping_text",
+            "label": "Free Shipping Text",
+            "default": "Limited time offer to Get FREE SHIPPING"
+        },
+        {
+            "type": "header",
+            "content": "Free Gift Settings"
+        },
+        {
+            "type": "select",
+            "id": "gift_by",
+            "label": "Gift By",
+            "options": [
+                {
+                    "value": "item_count",
+                    "label": "Item Count"
+                },
+                {
+                    "value": "amount",
+                    "label": "Amount"
+                }
+            ]
+        },
+        {
+            "type": "number",
+            "id": "item_count",
+            "label": "Item Count Required for Free Gift",
+            "default": 3
+        },
+        {
+            "type": "number",
+            "id": "amount",
+            "label": "Amount Required for Free Gift(USD)",
+            "default": 100
+        }
+    ],
+    "presets": [
+        {
+            "category": "Cart Drawer",
+            "name":"Cart Drawer"
+        }
+    ]
+}
+{% endschema %}

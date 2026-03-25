@@ -1,0 +1,386 @@
+:root{
+    --BDO-font-light:"BDO Grotesk Light";
+    --BDO-font-medium:"BDO Grotesk Medium";
+    --BDO-font-regular:"BDO Grotesk Regular";
+}
+/* font weight h2 */
+.h2,.h3,h3,h2,.h1,h1{
+ font-weight:400;
+ text-transform:uppercase;
+}
+/* medium weight fonts elements */
+.card__heading,
+.multicolumn-card__info h3,
+.accordion__title{
+font-family:var(--BDO-font-medium);
+font-weight:500;
+text-transform: none;
+}
+.footer-block__heading,
+.singup--form_container h2 {
+    font-family: var(--BDO-font-regular);
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+.card__heading.custom-card__heading.h5,
+.card__heading.custom-card__heading.h5 .full-unstyled-link{
+    font-family: var(--BDO-font-regular);
+}
+/* header icons */
+.icon-account,
+.icon-cart-empty,
+.icon-cart {
+    fill: rgba(var(--color-foreground), 1) !important;
+}
+.header__icon--cart .icon{
+height:2.4rem;
+width:2.4rem;
+}
+.header_icons .header__icon .icon{
+height: 2.4rem;
+width: 2.4rem; 
+}
+.m-0{margin: 0;}
+.whatsapp-icon{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 60px;
+    background: #25D366;
+    height: 60px;
+    animation: bounce 1.5s infinite;
+}
+.whats_font{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    background: #ffffff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+/* button */
+.button{
+    min-height: 35px;
+    padding-inline: 10px;
+    letter-spacing: 0;
+    font-family: var(--BDO-font-regular);
+    min-width: 135px;
+    padding-inline: 10px;
+} 
+.button.button--secondary {
+    border: 1px solid;
+}
+.global-button-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.button:after{
+    content:unset;
+}
+.button:after{
+    content:url(https://cdn.shopify.com/s/files/1/0945/2375/2778/files/arrow.svg?v=1763632947);
+    position: unset;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+.button.button--secondary:after{
+    content:url(https://cdn.shopify.com/s/files/1/0945/2375/2778/files/secondary-arrow.svg?v=1763633097);
+}
+/* header */
+.header__menu-item.link{
+  font-size:1.6rem;
+} 
+/* marquee section */
+
+.marquee-content-wrapper.marquee-row {
+    font-family:var(--BDO-font-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px;
+}
+.marquee-slider:not(.slick-initialized){
+    display:none;
+}
+.marquee-slider-item{
+    min-width:200px;
+    padding-inline:20px;
+    margin:0;
+    letter-spacing:0;
+}
+.annoucement-marquee-content {
+    max-width: calc(100% - 150px);
+}
+/* image with text bullets settings */
+.addition-text-content ul {
+    letter-spacing: 0;
+    list-style-type: none;
+    counter-reset: list-counter;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 14px;
+    text-align:left;
+}
+.addition-text-content ul li {
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    align-items: start;
+    counter-increment: list-counter;
+    margin-left: 0;
+}
+.addition-text-content ul li:before {
+    content: counter(list-counter);
+    background-color: #1f4e5f;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50px;
+    margin-top: 5px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    width: 30px;
+    font-size: 12px;
+    height: 30px;
+    float: left;
+}
+/* inline newsletter */
+.singup--form_container .newsletter-form{
+    justify-content:end;
+}
+.singup--form_container h2 {
+   margin: 0;
+}
+.singup--form_container {
+  padding-block: 20px;
+}
+.singup--form_container .newsletter-form__field-wrapper {
+    width: 100%;
+    margin-left: auto;
+}
+.am-footer-newsletter {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF26;
+    padding: 5px 10px;
+    border-radius: 50px;
+    padding-left: 20px;
+}
+.am-footer-fields,.am-footer-fields input {
+  width: 100%;
+  min-height: 40px;
+  border-radius: 50px;
+}
+.am-footer-fields input {
+  background-color: transparent;
+  border: 0;
+  font-family: var(--font-body-family);
+}
+.singup--form_container .newsletter-form__field-wrapper {
+  width: 100%;
+  margin-left: auto;
+  max-width: 100%; 
+}
+.am-newsletter-wrapper {
+    border-top: solid .1rem rgba(var(--color-foreground), .08);
+}
+/* multimedia section */
+.multimedia-image img {
+width: 100%;
+height: 100%;
+position: absolute;
+object-fit: cover;
+object-position: center;
+}
+.multimedia-image {
+position: relative;
+aspect-ratio: 1/1;
+}
+.multimedia-images {
+display: grid;
+grid-template-columns: auto auto;
+gap: 10px;
+}
+/* social media icons */
+.multimedia-social .list-social__item .icon {
+    height: 4.2rem;
+    width: 4.2rem;
+}
+.multimedia-social .svg-wrapper{
+    width: 35px;
+    height: 35px;
+}
+.footer-block .multimedia-social{
+    justify-content:start;
+}
+.footer-block .multimedia-social .list-social__link{
+    padding-left:0;
+}
+/* faq section */
+.accordion summary{
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-open{
+    display:none;
+}
+.accordion details[open]>summary .icon-open{
+    display:block;
+}
+.accordion details[open]>summary  .icon-close{
+    display:none;
+}
+.accordion__title{
+    letter-spacing:0;
+}
+/* payment icons */
+.payement-icons {
+display: flex;
+list-style: none;
+align-items: center;
+justify-content: space-between;
+padding-left: 0;
+margin: 0;
+}
+.footer__icon-bottom {
+padding-block: 10px;
+padding-top: 10px;
+}
+.footer__icon-bottom p {
+margin: 0;
+font-family: 'BDO Grotesk Light';
+}
+.payment-icon-wrapper img {
+width: 100%;
+height: 100%;
+}
+.payment-icon-wrapper {
+max-width: 127px;
+}
+.footer-policy.footer__content-bottom{
+    padding: 0;
+    padding-bottom: 3.5rem;
+}
+/* badge  */
+.badge {
+    /* font-size: 22px; */
+    font-weight: 300;
+    font-family: var(--BDO-font-light);
+    font-weight:300;
+}
+
+/* Banner image */
+.icon-cover img {
+    width: 100%;
+    height: 100%;
+}
+.trust-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    line-height: 1.3;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.icon-cover {
+max-width: 150px;
+}
+.avatar-name{
+display: flex;
+gap: 5px;
+align-items: center;
+}
+.icon-rte p {
+margin-bottom: 5px;
+}
+.avatar-name img{  
+max-width: 18px;
+width: 18px;
+max-height: 18px;
+border-radius: 50px;
+}
+/* add to cart button */
+.card__content .button.quick-add__submit{
+ --buttons-radius-outset: 32px;
+}
+/* inventory levels */
+.stocks-levels.stocks-label {
+  font-weight: 600;
+}
+.levels-message {
+  font-weight: 300;
+}
+.stocks-wrapper {
+  margin-bottom: 5px;
+}
+
+.main-price {
+    font-family: var(--BDO-font-regular) !important;
+     margin-right: 5px !important;
+    letter-spacing: 0;
+}
+
+.whatsapp_icon{position: fixed; bottom: 20px; right: 20px;}
+@media(min-width:750px){
+    .card__heading.custom-card__heading.h5,
+    .card__heading.custom-card__heading.h5 .full-unstyled-link {
+    font-family: var(--BDO-font-regular) !important;
+    font-weight: 500;
+    font-size: 22px;
+    }
+    .product-grid .badge {
+    font-size: 22px;
+    }
+    .main-price {
+    font-size: 22px;
+    }
+    .price--on-sale .price-item--regular.compare-price {
+    font-size: 1.6rem;
+    }
+}
+@media(min-width: 750px){
+ .d-lg-none{display: none;}
+}
+@media(max-width: 749px){
+       .whats_font, .d-sm-none, .discount-label,.stocks-wrapper {
+        display: none;
+    }
+   
+}
+@media(max-width:600px){
+ 
+    .hxl{
+      font-size:calc(var(--font-heading-scale) * 2rem);
+    }
+    .image-with-text__content--mobile-center .trust-icon-wrapper {
+       text-align: left;
+    }
+    .image-with-text .image-with-text__content {
+      padding-inline: 10px;
+    }
+    .singup--form_container .grid__item:first-child {
+     margin-bottom: 20px;
+    }
+}

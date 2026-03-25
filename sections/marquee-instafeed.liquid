@@ -1,0 +1,139 @@
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-marquee-slider-{{ ai_gen_id }} {
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ section.settings.background_color }};
+    padding: {{ section.settings.padding }}px 0;
+  }
+
+  .ai-marquee-slider__track-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ section.settings.image_gap }}px;
+    will-change: transform;
+  }
+
+  .ai-marquee-slider__image-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    height: {{ section.settings.image_height }}px;
+    border-radius: {{ section.settings.border_radius }}px;
+    overflow: hidden;
+    padding-block: 5px;
+  }
+
+  .ai-marquee-slider__image-{{ ai_gen_id }} {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-marquee-slider__image-wrapper-{{ ai_gen_id }} {
+      height: {{ section.settings.image_height_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-marquee-slider-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
+  <div class="ai-marquee-slider__track-{{ ai_gen_id }}">
+    {% assign images = '' %}
+    {% for i in (1..9) %}
+      {% assign image_key = 'image_' | append: i %}
+      {% if section.settings[image_key] != blank %}
+        {% assign images = images | append: image_key | append: ',' %}
+        <div class="ai-marquee-slider__image-wrapper-{{ ai_gen_id }}">
+          <img src="{{ section.settings[image_key] | image_url }}" alt="" class="ai-marquee-slider__image-{{ ai_gen_id }}" loading="lazy">
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% comment %} duplicate for smooth loop {% endcomment %}
+    {% assign img_array = images | split: ',' %}
+    {% for key in img_array %}
+      {% if key != '' %}
+        <div class="ai-marquee-slider__image-wrapper-{{ ai_gen_id }}">
+          <img src="{{ section.settings[key] | image_url }}" alt="" class="ai-marquee-slider__image-{{ ai_gen_id }}" loading="lazy">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const track = document.querySelector(".ai-marquee-slider__track-{{ ai_gen_id }}");
+  if (!track) return;
+
+  function startMarquee(){
+    const trackWidth = track.scrollWidth / 2; // width of original set
+    const duration = {{ section.settings.animation_duration }};
+    
+    let styleTag = document.getElementById("ai-marquee-style-{{ ai_gen_id }}");
+    if (!styleTag) {
+      styleTag = document.createElement("style");
+      styleTag.id = "ai-marquee-style-{{ ai_gen_id }}";
+      document.head.appendChild(styleTag);
+    }
+    styleTag.textContent = `
+      @keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-${trackWidth}px); }
+      }
+      .ai-marquee-slider__track-{{ ai_gen_id }} {
+        animation: ai-marquee-scroll-{{ ai_gen_id }} ${duration}s linear infinite;
+        {% if section.settings.direction == 'right' %} animation-direction: reverse; {% endif %}
+      }
+      .ai-marquee-slider__track-{{ ai_gen_id }}:hover {
+        animation-play-state: {% if section.settings.pause_on_hover %}paused{% else %}running{% endif %};
+      }
+    `;
+  }
+
+  // Wait for all images to load before calculating
+  const imgs = track.querySelectorAll("img");
+  let loaded = 0;
+  imgs.forEach(img => {
+    if (img.complete) {
+      loaded++;
+      if (loaded === imgs.length) startMarquee();
+    } else {
+      img.addEventListener("load", () => {
+        loaded++;
+        if (loaded === imgs.length) startMarquee();
+      });
+    }
+  });
+
+  window.addEventListener("resize", startMarquee);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Image marquee slider",
+  "settings": [
+    { "type": "range", "id": "image_height", "min": 60, "max": 280, "step": 10, "unit": "px", "label": "Image height", "default": 200 },
+    { "type": "range", "id": "image_height_mobile", "min": 80, "max": 300, "step": 10, "unit": "px", "label": "Image height on mobile", "default": 150 },
+    { "type": "range", "id": "image_gap", "min": 0, "max": 50, "step": 5, "unit": "px", "label": "Gap between images", "default": 20 },
+    { "type": "range", "id": "padding", "min": 0, "max": 100, "step": 5, "unit": "px", "label": "Top and bottom padding", "default": 40 },
+    { "type": "range", "id": "animation_duration", "min": 5, "max": 100, "step": 1, "unit": "s", "label": "Scroll duration", "default": 30 },
+    { "type": "select", "id": "direction", "label": "Direction", "options": [ { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" } ], "default": "left" },
+    { "type": "checkbox", "id": "pause_on_hover", "label": "Pause on hover", "default": true },
+    { "type": "color", "id": "background_color", "label": "Background color", "default": "#ffffff" },
+    { "type": "range", "id": "border_radius", "min": 0, "max": 20, "step": 2, "unit": "px", "label": "Image border radius", "default": 8 },
+    { "type": "image_picker", "id": "image_1", "label": "Image 1" },
+    { "type": "image_picker", "id": "image_2", "label": "Image 2" },
+    { "type": "image_picker", "id": "image_3", "label": "Image 3" },
+    { "type": "image_picker", "id": "image_4", "label": "Image 4" },
+    { "type": "image_picker", "id": "image_5", "label": "Image 5" },
+    { "type": "image_picker", "id": "image_6", "label": "Image 6" },
+    { "type": "image_picker", "id": "image_7", "label": "Image 7" },
+    { "type": "image_picker", "id": "image_8", "label": "Image 8" },
+    { "type": "image_picker", "id": "image_9", "label": "Image 9" }
+  ],
+  "presets": [
+    { "name": "Image marquee slider" }
+  ]
+}
+{% endschema %}

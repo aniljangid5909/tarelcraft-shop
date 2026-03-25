@@ -1,0 +1,1390 @@
+{% assign amoni_gen_id = "amoni" | append:"afterbefore" | handle %}
+{% style %}
+  .amoni-before-after-section-{{ amoni_gen_id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+    overflow: hidden;
+  }
+
+  .amoni-before-after-contamoniner-{{ amoni_gen_id }} {
+    max-width: {{ section.settings.contamoniner_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .amoni-before-after-header-{{ amoni_gen_id }} {
+    text-align: {{ section.settings.text_alignment }};
+    margin-bottom: 40px;
+  }
+
+  .amoni-before-after-title-{{ amoni_gen_id }} {
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.title_color }};
+    margin: 0 0 16px;
+  }
+
+  .amoni-before-after-description-{{ amoni_gen_id }} {
+    font-size: {{ section.settings.description_size }}px;
+    color: {{ section.settings.description_color }};
+    margin: 0;
+  }
+
+  .amoni-before-after-slider-wrapper-{{ amoni_gen_id }} {
+    position: relative;
+  }
+
+  .amoni-before-after-slider-contamoniner-{{ amoni_gen_id }} {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .amoni-before-after-slider-track-{{ amoni_gen_id }} {
+    display: flex;
+    gap: {{ section.settings.gap }}px;
+    transition: transform {{ section.settings.transition_speed | divided_by: 1000.0 }}s ease;
+  }
+
+  .amoni-before-after-slide-{{ amoni_gen_id }} {
+    flex: 0 0 calc((100% - ({{ section.settings.columns_desktop | minus: 1 }} * {{ section.settings.gap }}px)) / {{ section.settings.columns_desktop }});
+    min-width: 0;
+  }
+
+  .amoni-before-after-card-{{ amoni_gen_id }} {
+    background-color: {{ section.settings.card_background }};
+    border-radius: {{ section.settings.card_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 {{ section.settings.card_shadow_vertical }}px {{ section.settings.card_shadow_blur }}px rgba(0, 0, 0, {{ section.settings.card_shadow_opacity | divided_by: 100.0 }});
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .amoni-before-after-image-wrapper-{{ amoni_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .amoni-before-after-image-contamoniner-{{ amoni_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: {{ section.settings.image_aspect_ratio }}%;
+  }
+
+  .amoni-before-after-image-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .amoni-before-after-after-image-{{ amoni_gen_id }} {
+    clip-path: inset(0 0 0 50%);
+    transition: clip-path 0.3s ease;
+  }
+
+  .amoni-before-after-divider-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: {{ section.settings.slider_color }};
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: left 0.3s ease;
+  }
+
+  .amoni-before-after-divider-button-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 48px;
+    height: 48px;
+    background-color: {{ section.settings.slider_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .amoni-before-after-divider-button-{{ amoni_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    color: {{ section.settings.slider_icon_color }};
+  }
+
+  .amoni-before-after-labels-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .amoni-before-after-label-{{ amoni_gen_id }} {
+    background-color: {{ section.settings.label_background }};
+    color: {{ section.settings.label_text_color }};
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .amoni-before-after-controls-{{ amoni_gen_id }} {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+    display:none;
+  }
+
+  .amoni-before-after-control-btn-{{ amoni_gen_id }} {
+    width: 40px;
+    height: 40px;
+    background-color: {{ section.settings.control_button_bg }};
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .amoni-before-after-control-btn-{{ amoni_gen_id }}:hover {
+    transform: scale(1.1);
+  }
+
+  .amoni-before-after-control-btn-{{ amoni_gen_id }}:active {
+    transform: scale(0.95);
+  }
+
+  .amoni-before-after-control-btn-{{ amoni_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    color: {{ section.settings.control_button_icon }};
+  }
+
+  .amoni-before-after-content-{{ amoni_gen_id }} {
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  .amoni-before-after-card-title-{{ amoni_gen_id }} {
+    font-size: 18px;
+    color: {{ section.settings.card_title_color }};
+    margin: 0 0 8px;
+  }
+
+  .amoni-before-after-card-text-{{ amoni_gen_id }} {
+    font-size: 14px;
+    color: {{ section.settings.card_text_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .amoni-before-after-placeholder-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amoni-before-after-placeholder-{{ amoni_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .amoni-before-after-nav-{{ amoni_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: {{ section.settings.nav_button_bg }};
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .amoni-before-after-nav-{{ amoni_gen_id }}:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .amoni-before-after-nav-{{ amoni_gen_id }}:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .amoni-before-after-nav-{{ amoni_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    color: {{ section.settings.nav_button_icon }};
+  }
+
+  .amoni-before-after-nav-prev-{{ amoni_gen_id }} {
+    left: 0;
+  }
+
+  .amoni-before-after-nav-next-{{ amoni_gen_id }} {
+    right: 0;
+  }
+
+  .amoni-before-after-nav-{{ amoni_gen_id }}.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .amoni-before-after-dots-{{ amoni_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  .amoni-before-after-dot-{{ amoni_gen_id }} {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ section.settings.dot_color }};
+    opacity: 0.3;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .amoni-before-after-dot-{{ amoni_gen_id }}.active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 989px) {
+    .amoni-before-after-slide-{{ amoni_gen_id }} {
+      flex: 0 0 calc((100% - ({{ section.settings.columns_tablet | minus: 1 }} * {{ section.settings.gap }}px)) / {{ section.settings.columns_tablet }});
+    }
+
+    .amoni-before-after-nav-prev-{{ amoni_gen_id }} {
+      left: 10px;
+    }
+
+    .amoni-before-after-nav-next-{{ amoni_gen_id }} {
+      right: 10px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .amoni-before-after-slide-{{ amoni_gen_id }} {
+      flex: 0 0 100%;
+    }
+
+    .amoni-before-after-title-{{ amoni_gen_id }} {
+      font-size: {{ section.settings.title_size | times: 0.8 }}px;
+    }
+
+    .amoni-before-after-description-{{ amoni_gen_id }} {
+      font-size: {{ section.settings.description_size | times: 0.9 }}px;
+    }
+
+    .amoni-before-after-nav-{{ amoni_gen_id }} {
+      width: 40px;
+      height: 40px;
+    }
+
+    .amoni-before-after-nav-{{ amoni_gen_id }} svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+{% endstyle %}
+
+<before-after-slider-{{ amoni_gen_id }} 
+  class="amoni-before-after-section-{{ amoni_gen_id }}" 
+  data-autoplay="{{ section.settings.autoplay }}"
+  data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+  data-loop="{{ section.settings.loop }}"
+  {{ section.shopify_attributes }}
+>
+  <div class="amoni-before-after-contamoniner-{{ amoni_gen_id }}">
+    {% if section.settings.title != blank or section.settings.description != blank %}
+      <div class="amoni-before-after-header-{{ amoni_gen_id }}">
+        {% if section.settings.title != blank %}
+          <h2 class="amoni-before-after-title-{{ amoni_gen_id }}">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="amoni-before-after-description-{{ amoni_gen_id }}">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="amoni-before-after-slider-wrapper-{{ amoni_gen_id }}">
+      {% if section.settings.show_arrows %}
+        <button class="amoni-before-after-nav-{{ amoni_gen_id }} amoni-before-after-nav-prev-{{ amoni_gen_id }}" data-nav="prev" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      {% endif %}
+
+      <div class="amoni-before-after-slider-contamoniner-{{ amoni_gen_id }}">
+        <div class="amoni-before-after-slider-track-{{ amoni_gen_id }}">
+          {% for i in (1..10) %}
+            {% liquid
+              assign card_enabled_key = 'card_' | append: i | append: '_enabled'
+              assign before_image_key = 'card_' | append: i | append: '_before_image'
+              assign after_image_key = 'card_' | append: i | append: '_after_image'
+              assign card_title_key = 'card_' | append: i | append: '_title'
+              assign card_text_key = 'card_' | append: i | append: '_text'
+
+              assign card_enabled = section.settings[card_enabled_key]
+              assign before_image = section.settings[before_image_key]
+              assign after_image = section.settings[after_image_key]
+              assign card_title = section.settings[card_title_key]
+              assign card_text = section.settings[card_text_key]
+            %}
+
+            {% if card_enabled %}
+              <div class="amoni-before-after-slide-{{ amoni_gen_id }}" data-slide-index="{{ forloop.index0 }}">
+                <div class="amoni-before-after-card-{{ amoni_gen_id }}">
+                  <div class="amoni-before-after-image-wrapper-{{ amoni_gen_id }}">
+                    <div class="amoni-before-after-image-contamoniner-{{ amoni_gen_id }}">
+                      {% if before_image %}
+                        <img
+                          src="{{ before_image | image_url: width: 800 }}"
+                          alt="{{ before_image.alt | escape }}"
+                          class="amoni-before-after-image-{{ amoni_gen_id }} amoni-before-after-before-image-{{ amoni_gen_id }}"
+                          loading="lazy"
+                          width="{{ before_image.width }}"
+                          height="{{ before_image.height }}"
+                        >
+                      {% else %}
+                        <div class="amoni-before-after-placeholder-{{ amoni_gen_id }}">
+                          {{ 'image' | placeholder_svg_tag }}
+                        </div>
+                      {% endif %}
+
+                      {% if after_image %}
+                        <img
+                          src="{{ after_image | image_url: width: 800 }}"
+                          alt="{{ after_image.alt | escape }}"
+                          class="amoni-before-after-image-{{ amoni_gen_id }} amoni-before-after-after-image-{{ amoni_gen_id }}"
+                          loading="lazy"
+                          width="{{ after_image.width }}"
+                          height="{{ after_image.height }}"
+                        >
+                      {% endif %}
+
+                      {% if section.settings.show_labels %}
+                        <div class="amoni-before-after-labels-{{ amoni_gen_id }}">
+                          <span class="amoni-before-after-label-{{ amoni_gen_id }}">{{ section.settings.before_label }}</span>
+                          <span class="amoni-before-after-label-{{ amoni_gen_id }}">{{ section.settings.after_label }}</span>
+                        </div>
+                      {% endif %}
+
+                      <div class="amoni-before-after-divider-{{ amoni_gen_id }}" data-divider>
+                        <div class="amoni-before-after-divider-button-{{ amoni_gen_id }}">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="amoni-before-after-controls-{{ amoni_gen_id }}">
+                        <button class="amoni-before-after-control-btn-{{ amoni_gen_id }}" data-direction="left" aria-label="Show more before">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                          </svg>
+                        </button>
+                        <button class="amoni-before-after-control-btn-{{ amoni_gen_id }}" data-direction="right" aria-label="Show more after">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {% if card_title != blank or card_text != blank %}
+                    <div class="amoni-before-after-content-{{ amoni_gen_id }}">
+                      {% if card_title != blank %}
+                        <h3 class="amoni-before-after-card-title-{{ amoni_gen_id }}">{{ card_title }}</h3>
+                      {% endif %}
+                      {% if card_text != blank %}
+                        <div class="amoni-before-after-card-text-{{ amoni_gen_id }}">{{ card_text }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if section.settings.show_arrows %}
+        <button class="amoni-before-after-nav-{{ amoni_gen_id }} amoni-before-after-nav-next-{{ amoni_gen_id }}" data-nav="next" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      {% endif %}
+    </div>
+
+    {% if section.settings.show_dots %}
+      <div class="amoni-before-after-dots-{{ amoni_gen_id }}" data-dots></div>
+    {% endif %}
+  </div>
+</before-after-slider-{{ amoni_gen_id }}>
+
+<script>
+  (function() {
+    class BeforeAfterSlider{{ amoni_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentIndex = 0;
+        this.autoplayInterval = null;
+        this.isTransitioning = false;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.amoni-before-after-slider-track-{{ amoni_gen_id }}');
+        this.slides = this.querySelectorAll('.amoni-before-after-slide-{{ amoni_gen_id }}');
+        this.prevBtn = this.querySelector('[data-nav="prev"]');
+        this.nextBtn = this.querySelector('[data-nav="next"]');
+        this.dotsContamoniner = this.querySelector('[data-dots]');
+        
+        this.autoplay = this.dataset.autoplay === 'true';
+        this.autoplaySpeed = parseInt(this.dataset.autoplaySpeed) || 3000;
+        this.loop = this.dataset.loop === 'true';
+
+        this.slidesPerView = this.getSlidesPerView();
+        this.totalSlides = this.slides.length;
+        this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
+
+        this.initBeforeAfter();
+        this.initNavigation();
+        this.initDots();
+        this.updateNavButtons();
+
+        if (this.autoplay) {
+          this.startAutoplay();
+          this.addEventListener('mouseenter', () => this.stopAutoplay());
+          this.addEventListener('mouseleave', () => this.startAutoplay());
+        }
+
+        window.addEventListener('resize', () => this.handleResize());
+      }
+
+      getSlidesPerView() {
+        const width = window.innerWidth;
+        if (width <= 749) return 1;
+        if (width <= 989) return {{ section.settings.columns_tablet }};
+        return {{ section.settings.columns_desktop }};
+      }
+
+      handleResize() {
+        const newSlidesPerView = this.getSlidesPerView();
+        if (newSlidesPerView !== this.slidesPerView) {
+          this.slidesPerView = newSlidesPerView;
+          this.maxIndex = Math.max(0, this.totalSlides - this.slidesPerView);
+          this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+          this.updateSlider();
+          this.updateDots();
+        }
+      }
+
+      initBeforeAfter() {
+        this.slides.forEach((slide) => {
+          const divider = slide.querySelector('[data-divider]');
+          const afterImage = slide.querySelector('.amoni-before-after-after-image-{{ amoni_gen_id }}');
+          const contamoniner = slide.querySelector('.amoni-before-after-image-contamoniner-{{ amoni_gen_id }}');
+          const leftBtn = slide.querySelector('[data-direction="left"]');
+          const rightBtn = slide.querySelector('[data-direction="right"]');
+          
+          if (!divider || !afterImage || !contamoniner) return;
+
+          let currentPosition = 50;
+          let isDragging = false;
+
+          const updateDivider = (position) => {
+            currentPosition = Math.max(0, Math.min(100, position));
+            divider.style.left = currentPosition + '%';
+            afterImage.style.clipPath = `inset(0 0 0 ${currentPosition}%)`;
+          };
+
+          if (leftBtn) {
+            leftBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              currentPosition = Math.max(0, currentPosition - 10);
+              updateDivider(currentPosition);
+            });
+          }
+
+          if (rightBtn) {
+            rightBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              currentPosition = Math.min(100, currentPosition + 10);
+              updateDivider(currentPosition);
+            });
+          }
+
+          const handleDrag = (e) => {
+            const rect = contamoniner.getBoundingClientRect();
+            let x = e.clientX || e.touches[0].clientX;
+            let position = ((x - rect.left) / rect.width) * 100;
+            updateDivider(position);
+          };
+
+          const startDrag = (e) => {
+            isDragging = true;
+            handleDrag(e);
+          };
+
+          const stopDrag = () => {
+            isDragging = false;
+          };
+
+          const onDrag = (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            handleDrag(e);
+          };
+
+          divider.addEventListener('mousedown', startDrag);
+          divider.addEventListener('touchstart', startDrag);
+          
+          document.addEventListener('mousemove', onDrag);
+          document.addEventListener('touchmove', onDrag);
+          
+          document.addEventListener('mouseup', stopDrag);
+          document.addEventListener('touchend', stopDrag);
+        });
+      }
+
+      initNavigation() {
+        if (this.prevBtn) {
+          this.prevBtn.addEventListener('click', () => this.prev());
+        }
+        if (this.nextBtn) {
+          this.nextBtn.addEventListener('click', () => this.next());
+        }
+      }
+
+      initDots() {
+        if (!this.dotsContamoniner) return;
+
+        const numDots = this.maxIndex + 1;
+        for (let i = 0; i < numDots; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'amoni-before-after-dot-{{ amoni_gen_id }}';
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => this.goToSlide(i));
+          this.dotsContamoniner.appendChild(dot);
+        }
+        this.updateDots();
+      }
+
+      updateDots() {
+        if (!this.dotsContamoniner) return;
+        const dots = this.dotsContamoniner.querySelectorAll('.amoni-before-after-dot-{{ amoni_gen_id }}');
+        dots.forEach((dot, index) => {
+          if (index === this.currentIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      updateSlider() {
+        if (this.isTransitioning) return;
+        
+        const slideWidth = this.slides[0].offsetWidth;
+        const gap = {{ section.settings.gap }};
+        const offset = -(this.currentIndex * (slideWidth + gap));
+        
+        this.track.style.transform = `translateX(${offset}px)`;
+        this.updateNavButtons();
+        this.updateDots();
+      }
+
+      updateNavButtons() {
+        if (this.prevBtn) {
+          if (this.currentIndex === 0 && !this.loop) {
+            this.prevBtn.classList.add('disabled');
+          } else {
+            this.prevBtn.classList.remove('disabled');
+          }
+        }
+
+        if (this.nextBtn) {
+          if (this.currentIndex >= this.maxIndex && !this.loop) {
+            this.nextBtn.classList.add('disabled');
+          } else {
+            this.nextBtn.classList.remove('disabled');
+          }
+        }
+      }
+
+      prev() {
+        if (this.isTransitioning) return;
+        
+        if (this.currentIndex > 0) {
+          this.currentIndex--;
+        } else if (this.loop) {
+          this.currentIndex = this.maxIndex;
+        }
+        
+        this.updateSlider();
+      }
+
+      next() {
+        if (this.isTransitioning) return;
+        
+        if (this.currentIndex < this.maxIndex) {
+          this.currentIndex++;
+        } else if (this.loop) {
+          this.currentIndex = 0;
+        }
+        
+        this.updateSlider();
+      }
+
+      goToSlide(index) {
+        if (this.isTransitioning) return;
+        this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+        this.updateSlider();
+      }
+
+      startAutoplay() {
+        if (!this.autoplay) return;
+        this.stopAutoplay();
+        this.autoplayInterval = setInterval(() => {
+          if (this.currentIndex < this.maxIndex) {
+            this.next();
+          } else if (this.loop) {
+            this.currentIndex = 0;
+            this.updateSlider();
+          } else {
+            this.stopAutoplay();
+          }
+        }, this.autoplaySpeed);
+      }
+
+      stopAutoplay() {
+        if (this.autoplayInterval) {
+          clearInterval(this.autoplayInterval);
+          this.autoplayInterval = null;
+        }
+      }
+
+      disconnectedCallback() {
+        this.stopAutoplay();
+        window.removeEventListener('resize', this.handleResize);
+      }
+    }
+
+    customElements.define('before-after-slider-{{ amoni_gen_id }}', BeforeAfterSlider{{ amoni_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Before after slider",
+  "tag": "section",
+  "class":"before-after-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Before & After"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>See the amazing transformations</p>"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Columns on desktop",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Columns on tablet",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between slides",
+      "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 8000,
+      "step": 500,
+      "unit": "ms",
+      "label": "Autoplay speed",
+      "default": 3000
+    },
+    {
+      "type": "range",
+      "id": "transition_speed",
+      "min": 200,
+      "max": 1000,
+      "step": 100,
+      "unit": "ms",
+      "label": "Transition speed",
+      "default": 500
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop slides",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show navigation arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show navigation dots",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "contamoniner_width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Contamoniner width",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Image settings"
+    },
+    {
+      "type": "range",
+      "id": "image_aspect_ratio",
+      "min": 50,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "label": "Image aspect ratio",
+      "default": 75
+    },
+    {
+      "type": "checkbox",
+      "id": "show_labels",
+      "label": "Show before/after labels",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Before label",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "After label",
+      "default": "After"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "slider_color",
+      "label": "Divider",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "slider_icon_color",
+      "label": "Divider icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "control_button_bg",
+      "label": "Control button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "control_button_icon",
+      "label": "Control button icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_bg",
+      "label": "Navigation button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_icon",
+      "label": "Navigation button icon",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "label_background",
+      "label": "Label background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_text_color",
+      "label": "Label text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_vertical",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow vertical offset",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_blur",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Shadow blur",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "card_shadow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Shadow opacity",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_1_enabled",
+      "label": "Enable card 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_1_title",
+      "label": "Title",
+      "default": "Transformation 1"
+    },
+    {
+      "type": "textarea",
+      "id": "card_1_text",
+      "label": "Description",
+      "default": "Amazing results achieved"
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_2_enabled",
+      "label": "Enable card 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_2_title",
+      "label": "Title",
+      "default": "Transformation 2"
+    },
+    {
+      "type": "textarea",
+      "id": "card_2_text",
+      "label": "Description",
+      "default": "Incredible improvement"
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_3_enabled",
+      "label": "Enable card 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_3_title",
+      "label": "Title",
+      "default": "Transformation 3"
+    },
+    {
+      "type": "textarea",
+      "id": "card_3_text",
+      "label": "Description",
+      "default": "Outstanding results"
+    },
+    {
+      "type": "header",
+      "content": "Card 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_4_enabled",
+      "label": "Enable card 4",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_4_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_4_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_4_title",
+      "label": "Title",
+      "default": "Transformation 4"
+    },
+    {
+      "type": "textarea",
+      "id": "card_4_text",
+      "label": "Description",
+      "default": "Remarkable change"
+    },
+    {
+      "type": "header",
+      "content": "Card 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_5_enabled",
+      "label": "Enable card 5",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_5_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_5_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_5_title",
+      "label": "Title",
+      "default": "Transformation 5"
+    },
+    {
+      "type": "textarea",
+      "id": "card_5_text",
+      "label": "Description",
+      "default": "Stunning transformation"
+    },
+    {
+      "type": "header",
+      "content": "Card 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_6_enabled",
+      "label": "Enable card 6",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "card_6_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_6_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_6_title",
+      "label": "Title",
+      "default": "Transformation 6"
+    },
+    {
+      "type": "textarea",
+      "id": "card_6_text",
+      "label": "Description",
+      "default": "Exceptional results"
+    },
+    {
+      "type": "header",
+      "content": "Card 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_7_enabled",
+      "label": "Enable card 7",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "card_7_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_7_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_7_title",
+      "label": "Title",
+      "default": "Transformation 7"
+    },
+    {
+      "type": "textarea",
+      "id": "card_7_text",
+      "label": "Description",
+      "default": "Impressive results"
+    },
+    {
+      "type": "header",
+      "content": "Card 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_8_enabled",
+      "label": "Enable card 8",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "card_8_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_8_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_8_title",
+      "label": "Title",
+      "default": "Transformation 8"
+    },
+    {
+      "type": "textarea",
+      "id": "card_8_text",
+      "label": "Description",
+      "default": "Fantastic change"
+    },
+    {
+      "type": "header",
+      "content": "Card 9"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_9_enabled",
+      "label": "Enable card 9",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "card_9_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_9_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_9_title",
+      "label": "Title",
+      "default": "Transformation 9"
+    },
+    {
+      "type": "textarea",
+      "id": "card_9_text",
+      "label": "Description",
+      "default": "Wonderful results"
+    },
+    {
+      "type": "header",
+      "content": "Card 10"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_10_enabled",
+      "label": "Enable card 10",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "card_10_before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_10_after_image",
+      "label": "After image"
+    },
+    {
+      "type": "text",
+      "id": "card_10_title",
+      "label": "Title",
+      "default": "Transformation 10"
+    },
+    {
+      "type": "textarea",
+      "id": "card_10_text",
+      "label": "Description",
+      "default": "Spectacular transformation"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before after slider"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,174 @@
+.cart-drawer .cart-item__image {
+  aspect-ratio: 1 !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+
+.drawer__header {
+  flex-wrap: wrap !important;
+}
+.drawer__header .drawer__heading {
+  padding-left: 1.5rem !important;
+}
+.drawer__header .drawer__close {
+  right: 0.5rem !important;
+}
+.drawer__header .offer-text-cart {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.drawer__footer {
+  padding-inline: 1.5rem !important;
+}
+
+.drawer__inner {
+  padding: 0 0 !important;
+}
+
+.offer-text-cart {
+  background-color: #000;
+  color: #fff;
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+cart-drawer-items {
+  padding-inline: 1.5rem;
+}
+cart-drawer-items .cart-item-new {
+  display: grid;
+  grid-template-columns: 105px 1fr 100px;
+  gap: 15px;
+  border-radius: 4px;
+  background: #F7F9FA;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+@media screen and (max-width: 750px) {
+  cart-drawer-items .cart-item-new {
+    gap: 10px;
+    grid-template-columns: 105px 1fr 75px;
+  }
+}
+cart-drawer-items .cart-item-new .cart-item__image {
+  border-radius: 8px;
+}
+@media screen and (max-width: 750px) {
+  cart-drawer-items .cart-item-new .item-details {
+    grid-column-start: 2;
+    grid-column-end: -1;
+  }
+}
+cart-drawer-items .cart-item-new .item-details .cart-item__name {
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+cart-drawer-items .cart-item-new .item-details .item-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 !important;
+}
+cart-drawer-items .cart-item-new .item-details .item-options .product-option {
+  margin-top: 0 !important;
+}
+cart-drawer-items .cart-item-new .item-details .cart-item__final-price,
+cart-drawer-items .cart-item-new .item-details .cart-item__old-price {
+  color: #000;
+  font-family: "BDO Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+cart-drawer-items .cart-item-new .item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+cart-drawer-items .cart-item-new .item-actions .loading__spinner {
+  right: 34px;
+  top: 6px;
+}
+@media screen and (max-width: 750px) {
+  cart-drawer-items .cart-item-new .item-actions {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  cart-drawer-items .cart-item-new .item-actions cart-remove-button {
+    position: relative;
+    top: -3px;
+  }
+}
+cart-drawer-items .cart-item-new .item-actions .quantity {
+  min-height: unset !important;
+}
+cart-drawer-items .cart-item-new .item-actions .quantity::before {
+  display: none !important;
+}
+cart-drawer-items .cart-item-new .item-actions .quantity::after {
+  display: none !important;
+}
+cart-drawer-items .cart-item-new .item-actions quantity-popover .quantity {
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+cart-drawer-items .cart-item-new .item-actions .quantity__button {
+  width: calc(2.5rem / var(--font-body-scale)) !important;
+}
+cart-drawer-items .cart-item-new .item-actions .quantity__input {
+  width: 22px !important;
+  height: 22px !important;
+  max-width: 22px !important;
+  border-radius: 22px !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  leading-trim: both !important;
+  text-edge: cap !important;
+  font-family: "BDO Grotesk" !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  min-height: unset !important;
+}
+
+.drawer__footer {
+  border-top: none !important;
+}
+
+.free-shipping-text {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  width: 100%;
+  padding: 0 1rem;
+}
+.free-shipping-text p {
+  color: #222;
+  font-family: "BDO Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+}/*# sourceMappingURL=cart-custom.css.map */

@@ -1,0 +1,92 @@
+<style>
+    #cart-discount-form .discount-apply-btn{
+        display: flex;
+        width: 100%;
+    }
+
+    #cart-discount-form input[type="text"]{
+        border-radius: 4px;
+        background: #F7F9FA;
+        min-height: 53px;
+        appearance: none;
+        border: none;
+
+        color: #000000;
+        font-family: "BDO Grotesk";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        width: 100%;
+        padding: 0 23px;
+        margin: 10px 0;
+    }
+
+    .applied-discounts {
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .applied-discounts li span {
+        margin-right: 20px;
+    }
+
+    #cart-discount-form input[type="text"]::placeholder {
+        color: #898989;
+    }
+
+    .cart-discount-wrapper .heading-s {
+        color: #222;
+        font-family: "BDO Grotesk";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        margin: 0;
+    }
+</style>
+<div class="cart-discount-wrapper">
+    <h3 class="heading-s">
+        Coupon Code
+    </h3>
+    <form id="cart-discount-form">
+        <input
+        type="text"
+        name="discount"
+        id="discount-code-input"
+        placeholder="Have a discount code?"
+        required
+        >
+        <button type="submit" class="button discount-apply-btn">
+        Apply
+        </button>
+    </form>
+    <p class="discount-error" style="display:none;color:red;"></p>
+    <ul class="applied-discounts" style="display:none;"></ul>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('cart-discount-form');
+  const input = document.getElementById('discount-code-input');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const code = input.value.trim();
+
+    fetch(`/discount/${code}`)
+      .then(() => fetch('/cart'))
+      .then(() => {
+        location.assign('/checkout');
+        input.value = '';
+      })
+      .catch(() => {
+        errorBox.innerText = 'Invalid discount code';
+        errorBox.style.display = 'block';
+      });
+  });
+});
+</script>
